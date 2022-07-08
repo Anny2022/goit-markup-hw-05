@@ -645,7 +645,9 @@ span,
 
 .card-thumb:hover::before {
   opacity: 1;
+  transform: translateY(-35px);
 }
+
 .card-thumb {
   position: relative;
 }
@@ -672,7 +674,8 @@ span,
   transform: translate(-50%, -50%);
 
   opacity: 0;
-  transition: 250ms opacity linear;
+
+  transition: backroud-color 250ms opacity cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-actions-text {
@@ -735,6 +738,9 @@ span,
   line-height: 1.62;
   text-align: center;
   cursor: pointer;
+
+  transition: transform background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-img {
